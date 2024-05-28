@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/catalog_recycler_image"
+        android:layout_width="135dp"
+        android:layout_height="225dp"
+        android:layout_margin="10dp"
+        android:background="@color/light_gray"
+        android:transitionName="image" />
+
+    <ProgressBar
+        android:id="@+id/catalog_image_progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:theme="@style/LoadingProgressBarStyle"
+        android:visibility="gone" />
+
+</RelativeLayout>

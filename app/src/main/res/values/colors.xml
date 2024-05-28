@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#2FA769</color>
+    <color name="green_faint">#102FA769</color>
+    <color name="yellow">#F2CA51</color>
+    <color name="yellow_faint">#10F2CA51</color>
+    <color name="yellow_medium">#ffF2CA51</color>
+    <color name="sky_blue">#0186FF</color>
+    <color name="red">#B00020</color>
+    <color name="red_faint">#10B00020</color>
+    <color name="black_icon">#3E3E3E</color>
+    <color name="gray_icon">#626262</color>
+    <color name="text_gray">#808080</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="gray_line">#BDB9B9</color>
+    <color name="sky_blue_medium">#500186FF</color>
+    <color name="sky_blue_faint">#100186FF</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#BDB9B9</color>
+    <color name="green_toolbar">#4CAF50</color>
+
+</resources>

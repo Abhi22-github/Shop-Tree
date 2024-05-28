@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- fragment holder container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/coordinate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_activity_bottom_navigation_fragment_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <FrameLayout
+            android:id="@+id/main_activity_frame_layout_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- bottom navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_activity_bottom_navigation_fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:padding="5dp"
+        android:theme="@style/Widget.BottomNavigationViewText"
+        android:visibility="gone"
+        app:itemIconSize="24sp"
+        app:itemIconTint="@color/main_activity_bottom_navigation_icon_color_selector"
+        app:itemTextAppearanceActive="@style/Widget.BottomNavigationViewText"
+        app:itemTextAppearanceInactive="@style/Widget.BottomNavigationViewText"
+        app:itemTextColor="@color/main_activity_bottom_navigation_icon_color_selector"
+        app:labelVisibilityMode="labeled"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:menu="@menu/main_activity_bottom_navigation" />
+
+    <ProgressBar
+        android:id="@+id/main_progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:theme="@style/LoadingProgressBarStyle" />
+</RelativeLayout>

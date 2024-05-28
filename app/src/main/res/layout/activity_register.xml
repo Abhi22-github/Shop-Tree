@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationActivities.RegisterActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="Your Phone"
+                android:textAppearance="@style/headerText"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/general_border_layout"
+            android:padding="7dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/registration_activity_CCP_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_contentColor="@color/black"
+                app:ccp_textSize="15sp" />
+
+            <EditText
+                android:id="@+id/registration_activity_edit_text_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/registration_activity_CCP_country_code"
+                android:layout_toRightOf="@id/registration_activity_CCP_country_code"
+                android:background="@null"
+                android:hint="Phone Number"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Please confirm your country code and enter your phone number"
+            android:textAppearance="@style/secondaryHeaderText"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registration_activity_material_button_send_OTP"
+                style="@style/MaterialButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get OTP" />
+
+            <ProgressBar
+                android:id="@+id/registration_activity_progress_bar_progress"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:elevation="3dp"
+                android:theme="@style/ProgressBarStyle"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="By continuing I agree to ShopTree's"
+            android:textAppearance="@style/headerText"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/terms_of_sevices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/terms_of_services"
+                android:textAppearance="@style/headerText"
+
+                android:textColor="@color/green"
+                android:textColorLink="@color/green"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/privacy_policy"
+                android:textAppearance="@style/headerText"
+                android:textColor="@color/green"
+                android:textColorLink="@color/green"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

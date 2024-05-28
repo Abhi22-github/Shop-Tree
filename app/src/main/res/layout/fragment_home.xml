@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BottomNavigation.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/home_fragment_relative_layout_select_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?selectableItemBackground"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/home_fragment_text_view_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:drawableStart="@drawable/ic_baseline_my_location"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Saidarshan Collany Ganesh Vihar,Sangamner"
+                android:textAppearance="@style/secondaryHeaderText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/launcher_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/launcher_app_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/launcher_icon"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="ShopTree"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/my_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toLeftOf="@id/search"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_my_location"
+                    android:tint="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_baseline_search"
+                    android:tint="@color/black" />
+
+
+            </RelativeLayout>
+
+            <!--
+                        <RelativeLayout
+                            android:id="@+id/search_view_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:transitionName="search"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@id/rel"
+                                android:background="@drawable/general_border_layout">
+
+                                <EditText
+                                    android:id="@+id/home_fragment_edit_text_search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:drawableStart="@drawable/ic_baseline_search"
+                                    android:drawablePadding="10dp"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/product_sans_regular"
+                                    android:hint="Search"
+                                    android:inputType="text|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:paddingStart="15dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/text_gray"
+                                    android:textCursorDrawable="@null" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/general_border_layout">
+
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="?selectableItemBackgroundBorderless"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_filter"
+                                    android:tint="@color/text_gray" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+            -->
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/banner"
+            android:visibility="gone" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/top_alert_border_layout"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/metropolis_medium"
+                    android:text="Currently there are no online stores near your location,
+but you can invite them."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Invite"
+                    android:id="@+id/invite"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/headerText"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/home_fragment_text_view_shops_around_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/metropolis_medium"
+                    android:text="Stores around you"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray_line" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/no_nearby_shops_illustrations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/no_nearby_shops_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ic_undraw_no_nearby_shops" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/no_nearby_shops_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="No Nearby Stores"
+                    android:textAppearance="@style/headerText"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_firestore_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="visible" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

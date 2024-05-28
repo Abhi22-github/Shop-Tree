@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BottomNavigation.LibraryFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="?selectableItemBackground"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:drawableStart="@drawable/ic_baseline_my_location"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:textAppearance="@style/secondaryHeaderText"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="Saidarshan Collany Ganesh Vihar,Sangamner"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+  /*  <com.google.android.material.tabs.TabLayout
+        android:id="@+id/library_fragment_tab_layout_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:theme="@style/NavigationTab"
+        app:tabGravity="fill"
+        android:layout_gravity="center_horizontal"
+        app:tabIconTint="@color/tab_icon_color_selector"
+        app:tabIndicatorColor="@color/sky_blue"
+        app:tabInlineLabel="true"
+        app:tabMaxWidth="0dp"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/NavigationTabTextAppearance" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/library_fragment_frame_layout_tab_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/library_fragment_tab_layout_tab_layout" />
+*/
+</LinearLayout>

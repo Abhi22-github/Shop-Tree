@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VerificationActivities.OTPActivity">
+
+    <!-- top fields -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/otp_activity_image_button_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="20dp"
+            android:src="@drawable/ic_back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/otp_activity_image_button_back_button"
+            android:text="@string/phone_verification"
+            android:textAppearance="@style/headerText"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/we_have_sent_a_verification_code_to"
+            android:textAppearance="@style/secondaryHeaderText"
+            android:textColor="#575151"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/otp_activity_text_view_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="@style/secondaryHeaderText"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <!--OTP field -->
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp_activity_otp_text_view_otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        app:bar_enabled="true"
+        app:bar_height="1dp"
+        app:height="40dp"
+        app:length="6"
+        app:otp_text_size="20dp"
+        app:width="40dp" />
+
+    <!-- timer and resend OTp Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/otp_activity_text_view_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:enabled="false"
+                android:text="@string/resend_otp"
+                android:textAppearance="@style/secondaryHeaderText"
+                android:textColor="@color/light_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/otp_activity_text_view_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/_0_59"
+                android:textAppearance="@style/secondaryHeaderText"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/otp_activity_submit_button"
+                style="@style/MaterialButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+            <ProgressBar
+                android:id="@+id/otp_activity_submit_button_loading"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:elevation="3dp"
+                android:theme="@style/ProgressBarStyle"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

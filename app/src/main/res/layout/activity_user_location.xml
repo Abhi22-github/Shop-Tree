@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserLocationActivity">
+
+
+    <ImageButton
+        android:id="@+id/shop_location_activity_image_button_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_back_button" />
+
+
+    <!--map for selecting shop location-->
+    <RelativeLayout
+        android:id="@+id/shop_location_activity_relative_layout_map_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ShopRegistrationActivities.MapAddressSelectActivity4" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/line"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_location_pin" />
+    </RelativeLayout>
+
+    <!--next Button -->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/metropolis_medium"
+            android:paddingStart="10dp"
+            android:text="Search Your Location"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:enabled="false"
+            android:hint="Your Location"
+            app:boxStrokeWidth=".3dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/green">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_location_activity_address_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text2"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:textColor="@color/black"
+                android:fontFamily="@font/metropolis_light"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:text="Address"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/shop_location_activity_button_next_button"
+            style="@style/MaterialButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Save" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/shop_location_activity_progress_bar_progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:elevation="3dp"
+        android:theme="@style/ProgressBarStyle"
+        android:visibility="gone" />
+</RelativeLayout>

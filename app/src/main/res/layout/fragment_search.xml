@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SearchFragment">
+
+    <RelativeLayout
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:transitionName="search">
+
+
+        <ImageButton
+            android:id="@+id/search_fragment_image_button_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_button" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_fragment_edit_text_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/search_fragment_image_button_back_button"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:hint="Search"
+            android:inputType="text|textNoSuggestions"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textAppearance="@style/secondaryHeaderText"
+            android:textColor="@color/text_gray"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp">
+
+            <requestFocus />
+        </com.google.android.material.textfield.TextInputEditText>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_fragment_recycler_view_search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

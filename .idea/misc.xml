@@ -1,0 +1,17 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Abhi/AndroidStudioProjects/Shopscustomers/app/src/main/res/drawable/bottom_sheet_rounded_corner.xml" value="0.19384615384615383" />
+        <entry key="..\:/Users/Abhi/AndroidStudioProjects/Shopscustomers/app/src/main/res/layout/activity_shop_details.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Abhi/AndroidStudioProjects/Shopscustomers/app/src/main/res/layout/bottom_sheet_dialog_order_items_and_details.xml" value="0.16018518518518518" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--user profile top bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="?actionBarSize">
+
+            <ImageButton
+                android:id="@+id/user_profile_edit_activity_image_button_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_marginStart="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_button" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/user_profile_edit_linear_layout_main_content"
+            android:orientation="vertical">
+            <!--user profile Image -->
+            <RelativeLayout
+                android:id="@+id/user_profile_edit_activity_relative_layout_image_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_edit_activity_circle_image_view_user_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/add_profile_image_background"
+                    android:backgroundTint="@color/sky_blue_medium"
+                     />
+
+                <ImageButton
+                    android:id="@+id/user_profile_edit_activity_image_button_add_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_outline_add_a_photo"
+                    android:tint="@color/sky_blue_medium" />
+            </RelativeLayout>
+
+
+
+            <!--user profile name -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_profile_edit_activity_edit_text_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="First Name"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_profile_edit_activity_edit_text_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme" />
+
+
+            <!--user profile email -->
+
+            <EditText
+                android:id="@+id/user_profile_edit_activity_edit_text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme" />
+
+
+
+            <!--user profile save Button -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/user_profile_edit_activity_material_button_save_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MaterialButtonStyle"
+                    android:text="Save"/>
+
+                <ProgressBar
+                    android:id="@+id/user_profile_edit_activity_progress_bar_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:elevation="3dp"
+                    android:theme="@style/ProgressBarStyle"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/user_profile_edit_activity_progress_bar_loading_progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:elevation="3dp"
+        android:theme="@style/LoadingProgressBarStyle"
+        android:visibility="gone" />
+</RelativeLayout>

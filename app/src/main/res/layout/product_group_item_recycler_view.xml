@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/general_border_layout">
+
+                    <ImageView
+                        android:id="@+id/product_status_icon"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_available_icon" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="3dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/product_item_recycler_relative_layout_image_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="1dp">
+
+                        <ImageView
+                            android:id="@+id/group_item_recycler_view_image_view_product_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:scaleType="centerCrop" />
+
+                        <ProgressBar
+                            android:id="@+id/group_item_recycler_view_image_progress_bar_progress"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/LoadingProgressBarStyle" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/group_item_rv_product_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="Product name"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/openSansSemiBold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/group_item_rv_product_brand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/group_item_rv_product_name"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_regular"
+                            android:gravity="center"
+                            android:text="Product brand"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/openSansRegular"
+                            android:textColor="@color/text_gray"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/group_item_rv_product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/group_item_rv_product_brand"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="200"
+                            android:textAppearance="@style/openSansSemiBold"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/group_item_rv_product_price"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="20dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/product_item_recycler_view_button_add_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/green"
+                                android:stateListAnimator="@null"
+                                android:text="ADD"
+                                android:textAppearance="@style/openSansRegular"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:strokeColor="#dbdbdb"
+                                app:strokeWidth=".3dp" />
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/product_item_recycler_view_constraints_layout_number_picker"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/product_item_recycler_view_button_add_button"
+                                app:layout_constraintEnd_toEndOf="@+id/product_item_recycler_view_button_add_button"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/product_item_recycler_view_button_add_button"
+                                app:layout_constraintVertical_bias="0.0">
+
+                                <TextView
+                                    android:id="@+id/product_item_recycler_view_button_minus_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="@drawable/general_border_layout"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/product_item_recycler_edit_text_quantity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="@null"
+                                    android:backgroundTint="#ebebeb"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="2"
+                                    android:stateListAnimator="@null"
+                                    android:text="1"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/product_item_recycler_view_button_plus_button"
+                                    app:layout_constraintStart_toStartOf="@+id/guideline10"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/product_item_recycler_view_button_plus_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="@drawable/general_border_layout"
+                                    android:backgroundTint="@color/green"
+                                    android:gravity="center"
+                                    android:text="+"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/guideline11"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                                />
+
+                                <androidx.constraintlayout.widget.Guideline
+                                    android:id="@+id/guideline10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    app:layout_constraintGuide_percent="0.32" />
+
+                                <androidx.constraintlayout.widget.Guideline
+                                    android:id="@+id/guideline11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    app:layout_constraintGuide_begin="85dp" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
